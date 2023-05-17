@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+        <title>Threat Trackers</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+        <header  id="navbar" >
+            <a href="#" class="logo" >Threat<span>Trackers</span></a>
+            <ul>
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="topic.html" class="active">Topic</a></li>
+                <li><a href="#" class="">About</a></li>
+                <li><a href="#" class="">Contact</a></li>
+            </ul>
+            <span class="menuIcon" onclick="menuToggle();"></span>
+        </header>
+ 
+    <div class="content">
+        <div class="bannerText" id="slideshowText">
+            <div class="active">
+                <h2>
+                    What is <br>
+                    <span>Virus</span>?
+                </h2>
+                <p>
+                    Viruses are self-replicating programs that infect other files or systems by attaching themselves to them. They can cause damage to data, software, and hardware components.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div >
+                <h2>
+                    What is <br>
+                    <span>Worm</span>?
+                </h2>
+                <p>
+                    Worms are similar to viruses but can spread independently without user intervention. They exploit vulnerabilities in computer networks and often consume network bandwidth or overload servers.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Trojan Horse</span>?
+                </h2>
+                <p>
+                    Trojans disguise themselves as legitimate software or files to trick users into executing them. Once installed, they can create backdoors, steal sensitive information, or enable remote access to the compromised system.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Ransomware</span>?
+                </h2>
+                <p>
+                    Ransomware encrypts the victim's files, making them inaccessible until a ransom is paid. It often spreads through malicious email attachments, compromised websites, or drive-by downloads.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Spyware</span>?
+                </h2>
+                <p>
+                    Spyware covertly collects information about a user's activities without their knowledge or consent. It can monitor keystrokes, capture screenshots, record browsing habits, and transmit the gathered data to a remote attacker.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Adware</span>?
+                </h2>
+                <p>
+                    Adware displays unwanted advertisements on the user's device, typically in the form of pop-ups or banners. It is often bundled with free software and can collect user information to deliver targeted ads.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Botnets</span>?
+                </h2>
+                <p>
+                    Botnets consist of a network of compromised computers, often called "zombies" or "bots." These infected machines are controlled remotely by a command and control server. Botnets are commonly used for large-scale attacks, such as distributed denial-of-service (DDoS) attacks.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Rootkits</span>?
+                </h2>
+                <p>
+                    Rootkits are designed to hide malicious software or activities on a system by modifying the operating system or system utilities. They grant attackers unauthorized access and control over the compromised system.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Keyloggers</span>?
+                </h2>
+                <p>
+                    Keyloggers record keystrokes on a computer or mobile device. They can capture sensitive information such as usernames, passwords, credit card details, and other personal data.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                    What is <br>
+                    <span>Fileless Malware</span>?
+                </h2>
+                <p>
+                    Fileless malware operates directly in computer memory without leaving traces on the hard drive. It leverages legitimate system processes or vulnerabilities to carry out its malicious activities, making it difficult to detect.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+        </div>
+<div class="bannerImg" id="slideshow">
+    <img src="image/computervirus.png" class="active">
+    <img src="image/worm.jpg">
+    <img src="image/trojans.jpg">
+    <img src="image/ransomware.jpg" >
+    <img src="image/spyware.jpg">
+    <img src="image/adware.jpg">
+    <img src="image/botnet.jpg" >
+    <img src="image/rootkits.png">
+    <img src="image/keylogger.jpg">
+    <img src="image/filelessmalware.jpg">
+</div>
+    </div>
+    <div class="icons">
+    <ul class="sci">
+        <li>
+<a href="#"><img src="image/facebook.png" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="image/instagram.png" alt=""></a>
+                    </li>
+    </ul>
+    <ul class="controls">
+        <li>
+            <a ><img src="image/back.png" onclick="backSlide(); backSlideText();"></a>
+        </li>
+        <li>
+            <a ><img src="image/next.png"onclick="nextSlide(); nextSlideText();" ></a>
+        </li>
+    </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+    function nextSlide()
+    {
+slides[index].classList.remove('active');
+index = (index + 1) % slides.length;
+slides[index].classList.add('active');
+
+    }
+
+    function backSlide()
+    {
+        slides[index].classList.remove('active');
+
+index = (index - 1 + slides.length) % slides.length;
+slides[index].classList.add('active');
+
+    }
+
+
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+    function nextSlideText()
+    {
+slidesText[i].classList.remove('active');
+i= (i+ 1) % slidesText.length;
+slidesText[i].classList.add('active');
+
+    }
+
+    function backSlideText()
+    {
+        slidesText[i].classList.remove('active');
+
+i = (i- 1 + slidesText.length) % slidesText.length;
+slidesText[i].classList.add('active');
+
+    }
+
+
+    function menuToggle()
+    {
+        var nav = document.getElementById('navbar')
+        nav.classList.toggle('active')
+    }
+
+</script>
+    </body>
+</html>
